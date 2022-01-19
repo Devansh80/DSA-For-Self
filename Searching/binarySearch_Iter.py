@@ -8,22 +8,22 @@ def binarySearch_Iter(arr, x):
     while left <= right:
         mid = (right+left)//2
         #if x is greater,ignore left half
-        if arr[mid] < x:
-            left = mid+1
+        if arr[mid] == x:
+            return mid
         #if x is smaller, ignore right half
-        elif arr[mid] > x:
-            right = mid-1
+        elif arr[mid] < x:
+            left = mid+1
         #given value of x is presented at mid
         else:
-            return mid
+            right = mid-1
     #If the element was not presented in the array it will return -1
     return -1
 
 
 if __name__ == "__main__":
     
-    arr = [2,3,4,10,50]
-    x = 4
+    arr = [3, 4, 5, 6, 7, 8, 9]
+    x = 5
     result = binarySearch_Iter(arr, x)
 
     if result != -1:
