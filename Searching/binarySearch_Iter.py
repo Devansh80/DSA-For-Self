@@ -7,13 +7,16 @@ def binarySearch_Iter(arr, x):
 
     while left <= right:
         mid = (right+left)//2
-        #if x is greater,ignore left half
+        
+        #If given value of x is presented at mid return mid
         if arr[mid] == x:
             return mid
-        #if x is smaller, ignore right half
+        
+        #if x is greater,ignore left half
         elif arr[mid] < x:
             left = mid+1
-        #given value of x is presented at mid
+        
+        #if x is smaller, ignore right half
         else:
             right = mid-1
     #If the element was not presented in the array it will return -1
@@ -23,7 +26,7 @@ def binarySearch_Iter(arr, x):
 if __name__ == "__main__":
     
     arr = [3, 4, 5, 6, 7, 8, 9]
-    x = 5
+    x = 9
     result = binarySearch_Iter(arr, x)
 
     if result != -1:
