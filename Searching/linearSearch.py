@@ -22,4 +22,4 @@ if __name__ == "__main__":
     if result == -1:
         print("Element not found")
     else:
-        print(f"Element found at index: {i}")
+        print(f"Element found at index: {result}")
